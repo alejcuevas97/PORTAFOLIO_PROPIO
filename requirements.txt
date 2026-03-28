@@ -13,3 +13,5 @@ gunicorn
 whitenoise
 
 psycopg2-binary
+
+django-browser-reload
