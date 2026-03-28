@@ -135,7 +135,7 @@ USE_TZ = True
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
-STATIC_ROOT= [BASE_DIR, 'staticfiles']
+STATIC_ROOT= (BASE_DIR, 'staticfiles')
 
 
 #archivos subidos desde la apk
