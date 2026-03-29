@@ -96,10 +96,7 @@ WSGI_APPLICATION = 'Portafolio.wsgi.application'
 
 DATABASES = {
     #'default': env.db('DATABASE_URL')
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    
 }
 
 
