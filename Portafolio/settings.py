@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'Portafolio.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    #'default': env.db('DATABASE_URL')
+    'default': env.db('DATABASE_URL')
     
 }
 
