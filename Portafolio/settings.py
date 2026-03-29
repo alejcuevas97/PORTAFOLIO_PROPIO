@@ -95,7 +95,11 @@ WSGI_APPLICATION = 'Portafolio.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db('DATABASE_URL')
+    #'default': env.db('DATABASE_URL')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
@@ -135,7 +139,7 @@ USE_TZ = True
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
-STATIC_ROOT= (BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 
 #archivos subidos desde la apk
