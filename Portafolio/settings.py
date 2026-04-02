@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'tailwind', 
     'theme',
     
+    
     ]
 
 TAILWIND_APP_NAME= 'theme'
@@ -136,7 +137,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')

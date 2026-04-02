@@ -12,7 +12,7 @@ urlpatterns = [
     path('perfil/', PerfilView.as_view(), name = "perfil"),
     path('resume/', ResumeView.as_view(), name = "resume"),
     path('contact/', ContactView.as_view(), name = "contact"),
-    path("__reload__/", include("django_browser_reload.urls")),
+    
     
     
 
