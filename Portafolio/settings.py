@@ -99,6 +99,9 @@ WSGI_APPLICATION = 'Portafolio.wsgi.application'
 
 DATABASES = {
     'default': env.db('DATABASE_URL')
+    #'default': {
+     #   'ENGINE': 'django.db.backends.sqlite3',
+      #  'NAME': BASE_DIR / 'db.sqlite3',
     
 }
 
@@ -144,14 +147,9 @@ USE_TZ = True
 # Archivos estáticos
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
- 
-
-# Archivos de usuario (media)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join( BASE_DIR / "media" ) 
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+ 
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
