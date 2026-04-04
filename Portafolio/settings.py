@@ -25,6 +25,7 @@ EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
     'porfolio.apps.PorfolioConfig',
     'tailwind', 
     'theme',
+    
     
     
     ]
@@ -140,12 +142,16 @@ USE_TZ = True
 
 
 # Archivos estáticos
-STATIC_URL = "/static/"
-if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR / "staticfiles")
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+ 
 
 # Archivos de usuario (media)
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join( BASE_DIR / "media" ) 
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
