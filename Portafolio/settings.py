@@ -35,17 +35,11 @@ INSTALLED_APPS = [
     'Portafolio',
     'porfolio.apps.PorfolioConfig',
     'tailwind', 
-    'theme',
-    
-    
-    
-    ]
-
-TAILWIND_APP_NAME= 'theme'
-INTERNAL_IPS = [
-    '127.0.0.1',
-
+    #'theme',
 ]
+    
+    
+
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"    
 
@@ -98,14 +92,14 @@ WSGI_APPLICATION = 'Portafolio.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db('DATABASE_URL')
-    #'default': {
-     #   'ENGINE': 'django.db.backends.sqlite3',
-      #  'NAME': BASE_DIR / 'db.sqlite3',
+    #'default': env.db('DATABASE_URL')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': BASE_DIR / 'db.sqlite3',
     
     
 }
-
+}
     
 
 
